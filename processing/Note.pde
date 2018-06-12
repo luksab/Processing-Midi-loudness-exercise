@@ -15,7 +15,7 @@ class Note
     this.interval = interval;
   }
 
-  void display() {
-    ellipse(width-(((millis()-time)/(interval*12))*width), height/2, 10, 10);
+  void display() {   
+    ellipse(width-(((millis()-time)/(interval*12))*width), map(vel,0,255,height-10,10), 10, 10);
   }
 }
